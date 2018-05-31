@@ -20,4 +20,10 @@ public class LoginController
     {
         userService.save(user);
     }
+
+    @PostMapping("/login")
+    User login(@RequestBody User user)
+    {
+        return userService.findFirstByUserEmailAndPasswprd(user.getUserEmail(), user.getPassword());
+    }
 }

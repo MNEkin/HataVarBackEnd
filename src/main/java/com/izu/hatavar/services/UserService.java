@@ -8,4 +8,5 @@ public interface UserService
 {
     List<User> findByPasswordAndUserEmail(String password, String userEmail);
     User save(User user);
+    User findFirstByUserEmailAndPasswprd(String userEmail, String password);
 }
