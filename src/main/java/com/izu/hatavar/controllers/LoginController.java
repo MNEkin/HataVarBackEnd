@@ -26,4 +26,15 @@ public class LoginController
     {
         return userService.findFirstByUserEmailAndPasswprd(user.getUserEmail(), user.getPassword());
     }
+
+    /*
+    * @PostMapping(value = "/bugs", headers = ("content-type=multipart/form-data;boundary=032a1ab685934650abbe059cb45d6ff3"))
+    void recordBug(@RequestBody BugRecord bugRecord, @RequestParam("file") MultipartFile[] files)
+    {
+        System.out.println(bugRecord.getContent());
+        String path = storageService.store(files);
+        bugRecord.setImgPath(path);
+        System.out.println("files are set");
+        bugRecordService.save(bugRecord);
+    }*/
 }
